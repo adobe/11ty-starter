@@ -25,13 +25,13 @@
     "@spectrum-css/ui-icons": "^1.1.2"
   },
   "devDependencies": {
-    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@spectrum-css/icon": "^9.1.0",
     "@spectrum-css/page": "^9.1.0",
     "@spectrum-css/tokens": "^16.0.2",
     "@spectrum-css/typography": "^8.1.0",
     "@toycode/markdown-it-class": "^1.2.4",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.21",
     "cross-env": "^10.0.0",
     "cssnano": "^7.0.1",
     "dayjs": "^1.11.5",
