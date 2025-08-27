@@ -1,0 +1,56 @@
+<!--
+ * Copyright 2025 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+-->
+
+{%- capture arrowLeft -%}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" style="transform: scaleX(-1)">
+  <path d="M9.7 4.387 6.623 1.262a.875.875 0 1 0-1.247 1.226l1.61 1.637H.925a.875.875 0 0 0 0 1.75h6.062l-1.61 1.637a.875.875 0 1 0 1.247 1.226l3.075-3.125a.874.874 0 0 0 0-1.226z"/>
+</svg>
+{%- endcapture -%}
+{%- capture arrowRight -%}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+  <path d="M9.7 4.387 6.623 1.262a.875.875 0 1 0-1.247 1.226l1.61 1.637H.925a.875.875 0 0 0 0 1.75h6.062l-1.61 1.637a.875.875 0 1 0 1.247 1.226l3.075-3.125a.874.874 0 0 0 0-1.226z"/>
+</svg>
+{%- endcapture -%}
+<nav aria-label="Pagination" class="pagination">
+  {% assign prevHref = pagination.href.previous %}
+  {% assign nextHref = pagination.href.next %}
+  {% if prevHref %}
+  <a
+    href="{{ prevHref }}"
+    aria-label="Previous page"
+  >
+    {{ arrowLeft }}
+  </a>
+  {% else %}
+  <span class="disabled">
+    {{ arrowLeft }}
+  </span>
+  {% endif %}
+  <p>
+    <span aria-current="page">{{ pagination.pageNumber | plus: 1 }}</span>
+    of {{ pagination.links.size }}
+  </p>
+{% if nextHref %}
+  <a
+    href="{{ nextHref }}"
+    aria-label="Next page"
+    class="{% unless nextHref %}disabled{% endunless %}"
+  >
+  {{ arrowRight }}
+  </a>
+{% else %}
+  <span class="disabled">
+    {{ arrowRight }}
+  </span>
+{% endif %}
+</nav>

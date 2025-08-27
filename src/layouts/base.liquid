@@ -1,0 +1,53 @@
+<!--
+ * Copyright 2025 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+-->
+
+<!doctype html>
+<html lang="{{ meta.lang }}" class="spectrum spectrum--medium spectrum--light">
+  <head>
+    {% render "head/meta.liquid"
+      title:title,
+      description:description,
+      meta:meta,
+      page:page
+    %}
+    {% render "head/schema.liquid"
+      meta:meta
+      schema:schema
+      url:page.url
+      title:page.title
+      description:page.description
+      author_name:author_name
+    %}
+    {% if config.typeKitId %}
+      <link rel="stylesheet" href="https://use.typekit.net/{{ config.typeKitId }}.css" />
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/index.css' | absoluteUrl }}" />
+  </head>
+  <body class="spectrum spectrum--light spectrum-Body spectrum-Body--sizeM">
+    <div class="main-wrapper">
+      <main>
+        {% render "includes/layout/header.liquid"
+          navigation:navigation.top,
+          page:page
+        %}
+        <article>
+          {{ content }}
+        </article>
+      </main>
+      {% render "includes/layout/footer.liquid"
+        navigation:navigation.bottom,
+        page:page
+      %}
+    </div>
+  </body>
+</html>

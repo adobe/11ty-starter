@@ -1,0 +1,167 @@
+/*!
+ * Copyright 2025 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+* {
+  font-size: var(--spectrum-body-size-m);
+  line-height: var(--spectrum-line-height-200);
+}
+
+/* Base elements */
+body {
+  background: var(--spectrum-white);
+}
+
+ol,
+ul {
+  margin: var(--spacing-default) 0;
+  padding-left: var(--spacing-default);
+
+  li {
+    margin-bottom: var(--spacing-small);
+
+    & > ul,
+    & > ol {
+      margin-top: var(--spacing-small);
+      margin-bottom: var(--spacing-small);
+    }
+  }
+}
+
+p,
+hr {
+  margin: var(--spacing-default) 0;
+}
+
+hr {
+  color: var(--spectrum-gray-300);
+}
+
+/* UI states */
+.disabled {
+  text-decoration: none;
+  cursor: not-allowed;
+  color: var(--spectrum-gray-400);
+  fill: var(--spectrum-gray-400);
+}
+
+/* Helpers */
+.image-banner {
+  margin: var(--spacing-large) 0;
+  width: 100%;
+  height: auto;
+}
+
+header,
+menu,
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  margin: var(--spacing-large) 0;
+
+  a:has(h1) {
+    text-decoration: none;
+  }
+
+  h1 {
+    display: flex;
+    gap: var(--spacing-default);
+
+    img {
+      height: var(--sizing-large);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: baseline;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+menu {
+  gap: var(--spacing-small);
+  list-style: none;
+
+  a,
+  span {
+    text-decoration: none;
+    font-weight: var(--spectrum-bold-font-weight);
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius-default);
+    cursor: pointer;
+  }
+
+  a {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--spectrum-gray-200);
+    }
+  }
+
+  .active {
+    background-color: var(--spectrum-gray-200);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--spectrum-gray-300);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: var(--spacing-default);
+  }
+}
+
+main {
+  flex: 1 1 0%;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+footer {
+  width: 80%;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+}
+
+footer {
+  margin: var(--spacing-default) auto;
+
+  menu {
+    justify-content: center;
+    margin-bottom: var(--spacing-large);
+  }
+
+  p {
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+.pagination svg {
+  height: var(--sizing-default);
+}

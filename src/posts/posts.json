@@ -1,0 +1,5 @@
+{
+  "layout": "post",
+  "permalink": "/blog/{{ title | slugify }}/index.html",
+  "schema": "blog"
+}

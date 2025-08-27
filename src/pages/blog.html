@@ -1,0 +1,31 @@
+---
+layout: base
+title: Blog
+description: All blog posts
+pagination:
+  data: collections.allPosts
+  size: 6
+permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}index.html"
+---
+
+{% for post in pagination.items %}
+<article>
+  <time
+    class="spectrum spectrum-Body spectrum-Body--sizeS"
+    datetime="{{ post.date }}"
+    >{{ post.date | date: "%B %e, %Y" }}</time
+  >
+  <h3 class="spectrum-Heading spectrum-Heading--sizeM spectrum-Heading--heavy">
+    <a href="{{ post.url | absoluteUrl }}">{{ post.data.title }}</a>
+  </h3>
+  <p>{{ post.data.description }}</p>
+</article>
+{%- unless forloop.last -%}
+<hr />
+{%- endunless -%}
+{% endfor %}
+{% if collections.allPosts.length > pagination.size %}
+{% render "includes/nav/pagination.liquid"
+  pagination:pagination
+%}
+{% endif %}
