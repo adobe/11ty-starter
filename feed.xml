@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://example.com/11ty-starter/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spectrum 11ty starter</title>
+    <link>https://example.com/11ty-starter/</link>
+    <atom:link href="https://example.com/11ty-starter/feed.xml" rel="self" type="application/rss+xml" />
+    <description></description>
+    <language>en</language>
+    <item>
+      <title>Test the 3rd</title>
+      <link>https://example.com/11ty-starter/blog/test-the-3rd/</link>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc.&lt;/p&gt;</description>
+      <pubDate>Thu, 05 Dec 2024 16:00:00 PST</pubDate>
+      <dc:creator>Your Name</dc:creator>
+      <guid>https://example.com/11ty-starter/blog/test-the-3rd/</guid>
+    </item>
+    <item>
+      <title>Test the 2nd</title>
+      <link>https://example.com/11ty-starter/blog/test-the-2nd/</link>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc.&lt;/p&gt;</description>
+      <pubDate>Thu, 05 Dec 2024 16:00:00 PST</pubDate>
+      <dc:creator>Your Name</dc:creator>
+      <guid>https://example.com/11ty-starter/blog/test-the-2nd/</guid>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://example.com/11ty-starter/blog/test/</link>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc.&lt;/p&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;This is a test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+      <pubDate>Thu, 05 Dec 2024 16:00:00 PST</pubDate>
+      <dc:creator>Your Name</dc:creator>
+      <guid>https://example.com/11ty-starter/blog/test/</guid>
+    </item>
+  </channel>
+</rss>

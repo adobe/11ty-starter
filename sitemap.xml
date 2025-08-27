@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+        <loc>https://adobe.github.io/11ty-starter/blog/test-the-3rd/</loc>
+        <lastmod>2024-12-06T00:00:00.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://adobe.github.io/11ty-starter/blog/test-the-2nd/</loc>
+        <lastmod>2024-12-06T00:00:00.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://adobe.github.io/11ty-starter/blog/test/</loc>
+        <lastmod>2024-12-06T00:00:00.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://adobe.github.io/11ty-starter/blog/</loc>
+        <lastmod>2025-07-08T15:55:20.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://adobe.github.io/11ty-starter/</loc>
+        <lastmod>2025-07-08T15:55:20.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://adobe.github.io/11ty-starter/internal.html</loc>
+        <lastmod>2025-07-08T15:55:20.000Z</lastmod>
+    </url>
+    </urlset>
