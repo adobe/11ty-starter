@@ -3,6 +3,7 @@ dist
 .cache
 
 # vars
+.env
 .env.local
 
 # dependencies
